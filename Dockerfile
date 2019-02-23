@@ -3,7 +3,7 @@ FROM nginx
 RUN echo "deb http://ftp.debian.org/debian jessie-backports main" | tee -a /etc/apt/sources.list
 
 RUN apt-get update \
-    && apt-get install -y bc cron \
+    && apt-get install -y bc cron iputils-ping curl \
     && rm -rf /var/lib/apt/lists/*
 
 RUN mkdir -p /usr/src
